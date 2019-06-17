@@ -1,8 +1,19 @@
 {% extends "bootstrap/base.html" %}
 
+{% block title %}明日方舟公开招募计算器{% endblock %}
+
+
 {% block content %}
 
 <table class="table table-bordered">
+        <tr>
+        <td>资质</td>
+        <td>
+            <button type="button" value="新手" class="btn btn-primary" onclick="selshow(this)" data-classification="tag">新手</button>
+            <button type="button" value="5" class="btn btn-primary" onclick="selshow(this)" data-classification="star">资深干员</button>
+            <button type="button" value="6" class="btn btn-primary" onclick="selshow(this)" data-classification="star">高级资深干员</button>
+        </td>
+    </tr>
     <tr>
         <td>星级</td>
         <td>
