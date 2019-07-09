@@ -1,4 +1,4 @@
-{% extends "bootstrap/base.html" %}
+{% extends "base.html" %}
 
 {% block title %}明日方舟公开招募计算器{% endblock %}
 
@@ -51,6 +51,7 @@
 <script type="text/javascript">
     var sel_dict = {};
     function selshow(data) {
+        var csrftoken = "{{ csrf_token() }}";
         var xmlhttp = new XMLHttpRequest();
         // 获取类型
         var testType = data.getAttribute("data-classification");
@@ -103,6 +104,7 @@
             }
         };
         // setRequestHeader 设置发送的数据类型为json
+        xmlhttp.setRequestHeader("X-CSRFToken",csrftoken);
         xmlhttp.setRequestHeader("Content-type","application/json; charset=UTF-8");
         xmlhttp.send(json_data);
 

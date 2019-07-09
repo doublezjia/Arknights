@@ -1,0 +1,17 @@
+.divline{
+    border: 1px solid #333;
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.avatar{
+    width: 80px;
+    height: 80px;
+    border: 1px dashed #333;
+}
+.avatarfile{
+    width: 100px;
+    height: 100px;
+    opacity: 0;/* 最关键的地方  把input设置成透明，这样只能看到按钮 */
+    position: absolute;
+}
