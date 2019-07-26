@@ -1,14 +1,12 @@
-{% extends "base.html" %}
-
-{% block content %}
-    {% for message in get_flashed_messages() %}
+ {% for message in get_flashed_messages() %}
     <div class="alert alert-warning">
         <button type="button" class="close" data-dismiss="alert">&times;</button>
         {{ message }}
     </div>
     {% endfor %}
 
-    <div class="container divline">
+    <div class="row ark-div">
+    <div class="col-md-12">
     <form method="post" enctype="multipart/form-data"  action="{{url_for('ark_add')}}" class="form-horizontal">
         <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
         <div class="row">
@@ -69,17 +67,18 @@
         <div class="col-md-3 form-group">
             <label>上传头像:</label>
             <div>
-                <input name="file1" class="avatarfile" type="file" accept="image/*" onchange="showavatar(this)">
+                <input name="file1" class="ark-avatarfile" type="file" accept="image/*" onchange="showavatar(this)">
             </div>
             <div>
-                <img id="avatar" src="/static/img/12F.png" class="avatar img-fluid float-left" >
+                <img id="avatar" src="/static/uploads/12F.png" class="ark-avatar img-fluid float-left" >
             </div>
         </div>
-    </div>
-    <div class="row" >
-        <div class="col-md-12 text-center"><input value="submit" type="submit" class="btn btn-primary" ></div>
+        </div>
+        <div class="row" >
+        <div class="col-md-12 text-center"><input value="添 加" type="submit" class="btn btn-primary" ></div>
     </div>
     </form>
+    </div>
     </div>
 
 <script type="text/javascript">
@@ -103,8 +102,4 @@
         };
         reader.readAsDataURL(file);
     }
-
-
 </script>
-
-{% endblock %}

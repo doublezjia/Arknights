@@ -4,143 +4,152 @@
 
 
 {% block content %}
-
-<table class="table table-bordered">
+<div class="container ark-show_bg">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <table class="table table-bordered ark_sel">
+            <tr>
+            <td class="ark-typetd">资质</td>
+            <td>
+                <button type="button" value="新手" class="btn btn-primary btn-sm" onclick="selshow(this)" data-classification="tag">新手</button>
+                <button type="button" value="5" class="btn btn-primary btn-sm" onclick="selshow(this)" data-classification="star">资深干员</button>
+                <button type="button" value="6" class="btn btn-primary btn-sm" onclick="selshow(this)" data-classification="star">高级资深干员</button>
+            </td>
+        </tr>
         <tr>
-        <td>资质</td>
-        <td>
-            <button type="button" value="新手" class="btn btn-primary" onclick="selshow(this)" data-classification="tag">新手</button>
-            <button type="button" value="5" class="btn btn-primary" onclick="selshow(this)" data-classification="star">资深干员</button>
-            <button type="button" value="6" class="btn btn-primary" onclick="selshow(this)" data-classification="star">高级资深干员</button>
-        </td>
-    </tr>
-    <tr>
-        <td>星级</td>
-        <td>
-        {% for star in condition_dict['star'] %}
-        <button type="button" value="{{star[0]}}" class="btn btn-primary" onclick="selshow(this)" data-classification="star">{{star[0]}}星</button>
-        {% endfor %}
-        </td>
-    </tr>
-    <tr>
-        <td>性别</td>
-        <td>
-        {% for gender in condition_dict['gender'] %}
-            <button type="button" value="{{condition_dict['gender'][gender]}}" class="btn btn-primary" onclick="selshow(this)" data-classification="gender">{{gender}}</button>
-        {% endfor %}
-        </td>
-    </tr>
-     <tr>
-         <td>职业</td>
-         <td>
-        {% for prof in condition_dict['profession'] %}
-        <button type="button" value="{{prof[0]}}" class="btn btn-primary" onclick="selshow(this)" data-classification="profession">{{prof[0]}}</button>
-        {% endfor %}
-         </td>
-     </tr>
-    <tr>
-        <td>TAG</td>
-        <td>
-        {% for tag in condition_dict['tag'] %}
-        <button type="button" value="{{tag}}" class="btn btn-primary" onclick="selshow(this)" data-classification="tag">{{tag}}</button>
-        {% endfor %}
-        </td>
-    </tr>
-</table>
+            <td class="ark-typetd">星级</td>
+            <td>
+            {% for star in condition_dict['star'] %}
+            <button type="button" value="{{star[0]}}" class="btn btn-primary btn-sm" onclick="selshow(this)" data-classification="star">{{star[0]}}星</button>
+            {% endfor %}
+            </td>
+        </tr>
+        <tr>
+            <td class="ark-typetd">性别</td>
+            <td>
+            {% for gender in condition_dict['gender'] %}
+                <button type="button" value="{{condition_dict['gender'][gender]}}" class="btn btn-primary btn-sm" onclick="selshow(this)" data-classification="gender">{{gender}}</button>
+            {% endfor %}
+            </td>
+        </tr>
+         <tr>
+             <td class="ark-typetd">职业</td>
+             <td>
+            {% for prof in condition_dict['profession'] %}
+            <button type="button" value="{{prof[0]}}" class="btn btn-primary btn-sm" onclick="selshow(this)" data-classification="profession">{{prof[0]}}</button>
+            {% endfor %}
+             </td>
+         </tr>
+        <tr>
+            <td class="ark-typetd">TAG</td>
+            <td>
+            {% for tag in condition_dict['tag'] %}
+            <button type="button" value="{{tag}}" class="btn btn-primary btn-sm" onclick="selshow(this)" data-classification="tag">{{tag}}</button>
+            {% endfor %}
+            </td>
+        </tr>
+    </table>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <script type="text/javascript">
+        var sel_dict = {};
+        function selshow(data) {
+            var csrftoken = "{{ csrf_token() }}";
+            var xmlhttp = new XMLHttpRequest();
+            // 获取类型
+            var testType = data.getAttribute("data-classification");
+            // 获取属性值
+            var i = data.getAttribute('value');
+            var table = "<tr><th>图片</th><th>名称</th><th>阵型</th><th>职业</th><th>性别</th><th>星级</th><th>特性</th><th>TAG</th></tr>";
+            // 判断是否存在这个对象
+            if(sel_dict[testType] instanceof Array){
+                // 通过.indexOf判断值是否存在 等于-1就是有，不等于-1就是没有
+                if(sel_dict[testType].indexOf(i)!= -1){
+                    // 删除该值 .splice(dict[testType].indexOf(i),1)
+                    sel_dict[testType].splice(sel_dict[testType].indexOf(i),1);
+                    // 修改样式
+                    data.setAttribute('class','btn btn-primary');
 
-<script type="text/javascript">
-    var sel_dict = {};
-    function selshow(data) {
-        var csrftoken = "{{ csrf_token() }}";
-        var xmlhttp = new XMLHttpRequest();
-        // 获取类型
-        var testType = data.getAttribute("data-classification");
-        // 获取属性值
-        var i = data.getAttribute('value');
-        var table = "<tr><th>图片</th><th>名称</th><th>阵型</th><th>职业</th><th>性别</th><th>星级</th><th>特性</th><th>TAG</th></tr>";
-        // 判断是否存在这个对象
-        if(sel_dict[testType] instanceof Array){
-            // 通过.indexOf判断值是否存在 等于-1就是有，不等于-1就是没有
-            if(sel_dict[testType].indexOf(i)!= -1){
-                // 删除该值 .splice(dict[testType].indexOf(i),1)
-                sel_dict[testType].splice(sel_dict[testType].indexOf(i),1);
-                // 修改样式
-                data.setAttribute('class','btn btn-primary');
-
+                }
+                else{
+                    // 添加值
+                    sel_dict[testType].push(i);
+                    data.setAttribute('class','btn btn-success');
+                }
             }
             else{
-                // 添加值
-                sel_dict[testType].push(i);
+                // 新建数组并添加值
+                sel_dict[testType] = new Array(i);
                 data.setAttribute('class','btn btn-success');
             }
-        }
-        else{
-            // 新建数组并添加值
-            sel_dict[testType] = new Array(i);
-            data.setAttribute('class','btn btn-success');
-        }
-        // 把对象转为json
-        json_data = JSON.stringify(sel_dict);
-        xmlhttp.open('POST','/select',true);
-        // 前端显示的
-        xmlhttp.onreadystatechange = function(){
-            if (xmlhttp.readyState==4 && xmlhttp.status==200){
-                respdata = JSON.parse(xmlhttp.responseText);
-                for (var respNum=0;respNum<respdata.length;respNum++ ){
-                    td = "<tr>" +
-                        "<td><img src=\"\\static\\img\\"+ respdata[respNum].name +".png\" class=\"img-rounded\"/></td>" +
-                        "<td>"+ respdata[respNum].name +"</td>" +
-                        "<td>"+ respdata[respNum].camp +"</td>" +
-                        "<td>"+ respdata[respNum].profession +"</td>" +
-                        "<td>"+ respdata[respNum].gender +"</td>" +
-                        "<td>"+ respdata[respNum].star +"星</td>" +
-                        "<td>"+ respdata[respNum].characteristic +"</td>" +
-                        "<td>"+ respdata[respNum].tag +"</td>" +
-                        "</tr>";
-                    table = table+td;
-                    document.getElementById('load').innerHTML=table;
+            // 把对象转为json
+            json_data = JSON.stringify(sel_dict);
+            xmlhttp.open('POST','/select',true);
+            // 前端显示的
+            xmlhttp.onreadystatechange = function(){
+                if (xmlhttp.readyState==4 && xmlhttp.status==200){
+                    respdata = JSON.parse(xmlhttp.responseText);
+                    for (var respNum=0;respNum<respdata.length;respNum++ ){
+                        td = "<tr>" +
+                            "<td><img src=\"\\static\\uploads\\"+ respdata[respNum].name +".png\" class=\"img-rounded\"/></td>" +
+                            "<td>"+ respdata[respNum].name +"</td>" +
+                            "<td>"+ respdata[respNum].camp +"</td>" +
+                            "<td>"+ respdata[respNum].profession +"</td>" +
+                            "<td>"+ respdata[respNum].gender +"</td>" +
+                            "<td>"+ respdata[respNum].star +"星</td>" +
+                            "<td>"+ respdata[respNum].characteristic +"</td>" +
+                            "<td>"+ respdata[respNum].tag +"</td>" +
+                            "</tr>";
+                        table = table+td;
+                        document.getElementById('load').innerHTML=table;
+                    }
+
                 }
+            };
+            // setRequestHeader 设置发送的数据类型为json
+            xmlhttp.setRequestHeader("X-CSRFToken",csrftoken);
+            xmlhttp.setRequestHeader("Content-type","application/json; charset=UTF-8");
+            xmlhttp.send(json_data);
 
-            }
-        };
-        // setRequestHeader 设置发送的数据类型为json
-        xmlhttp.setRequestHeader("X-CSRFToken",csrftoken);
-        xmlhttp.setRequestHeader("Content-type","application/json; charset=UTF-8");
-        xmlhttp.send(json_data);
-
-    }
-</script>
-
-
-<table class="table table-bordered table-hover" id="load">
-    <tr>
-        <th>图片</th>
-        <th>名称</th>
-        <th>阵型</th>
-        <th>职业</th>
-        <th>性别</th>
-        <th>星级</th>
-        <th>特性</th>
-        <th>TAG</th>
-    </tr>
-    {% for i in All_data %}
+        }
+    </script>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <table class="table table-bordered table-hover ark-showlist" id="load">
         <tr>
-            <td><img src="{{url_for('static',filename='img/'+i.name+'.png')}}" class="img-rounded"/></td>
-            <td>{{i.name}}</td>
-            <td>{{i.camp}}</td>
-            <td>{{i.profession}}</td>
-            {% if i.gender==0 %}
-                <td>女</td>
-            {% elif i.gender==1 %}
-                <td>男</td>
-            {% else %}
-                <td>未知</td>
-            {% endif %}
-            <td>{{i.star}}星</td>
-            <td>{{i.characteristic}}</td>
-            <td>{{i.tag}}</td>
+            <th>图片</th>
+            <th>名称</th>
+            <th>阵型</th>
+            <th>职业</th>
+            <th>性别</th>
+            <th>星级</th>
+            <th>特性</th>
+            <th>TAG</th>
         </tr>
-    {% endfor %}
-</table>
-
+        {% for i in All_data %}
+            <tr>
+                <td><img src="{{url_for('static',filename='uploads/'+i.name+'.png')}}" class="img-rounded"/></td>
+                <td>{{i.name}}</td>
+                <td>{{i.camp}}</td>
+                <td>{{i.profession}}</td>
+                {% if i.gender==0 %}
+                    <td>女</td>
+                {% elif i.gender==1 %}
+                    <td>男</td>
+                {% else %}
+                    <td>未知</td>
+                {% endif %}
+                <td>{{i.star}}星</td>
+                <td>{{i.characteristic}}</td>
+                <td>{{i.tag}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
 {% endblock %}

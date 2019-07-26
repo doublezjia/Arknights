@@ -8,40 +8,37 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Arknights" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/aknspider.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-850">
-              <caret line="123" column="25" selection-start-line="123" selection-start-column="25" selection-end-line="123" selection-end-column="25" />
-              <folding>
-                <element signature="e#607#748#0" />
-                <element signature="e#786#2277#0" />
-                <element signature="e#2370#2776#0" />
-                <element signature="e#2815#3065#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/flaskAkn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="26" column="69" lean-forward="true" selection-start-line="26" selection-start-column="69" selection-end-line="26" selection-end-column="69" />
+            <state relative-caret-position="175">
+              <caret line="124" column="82" selection-start-line="124" selection-start-column="82" selection-end-line="124" selection-end-column="82" />
               <folding>
-                <element signature="e#170#181#0" expanded="true" />
+                <element signature="e#170#192#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/index.html">
+        <entry file="file://$PROJECT_DIR$/templates/admin_base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3052">
-              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+            <state relative-caret-position="342">
+              <caret line="32" column="72" selection-start-line="32" selection-start-column="72" selection-end-line="32" selection-end-column="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/static/styles/admin_styles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="292">
+              <caret line="228" column="1" lean-forward="true" selection-start-line="228" selection-start-column="1" selection-end-line="228" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -52,6 +49,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
         <option value="HTML File" />
       </list>
     </option>
@@ -60,17 +59,45 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/templates/select.html" />
-        <option value="$PROJECT_DIR$/flaskAkn.py" />
-        <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/aknspider.py" />
+        <option value="$PROJECT_DIR$/static/js.js" />
+        <option value="$PROJECT_DIR$/static/admin_styles.css" />
+        <option value="$PROJECT_DIR$/templates/admin_edit.html" />
+        <option value="$PROJECT_DIR$/templates/admin_add.html" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
+        <option value="$PROJECT_DIR$/static/styles/styles.css" />
+        <option value="$PROJECT_DIR$/templates/arknights_add.html" />
+        <option value="$PROJECT_DIR$/templates/index.html" />
+        <option value="$PROJECT_DIR$/templates/arknights_selform.html" />
+        <option value="$PROJECT_DIR$/templates/arknights_edit.html" />
+        <option value="$PROJECT_DIR$/templates/_macros.html" />
+        <option value="$PROJECT_DIR$/templates/admin_select.html" />
+        <option value="$PROJECT_DIR$/templates/arknights_list.html" />
+        <option value="$PROJECT_DIR$/templates/arknights_useradd.html" />
+        <option value="$PROJECT_DIR$/templates/admin_login.html" />
+        <option value="$PROJECT_DIR$/templates/admin_nav.html" />
+        <option value="$PROJECT_DIR$/templates/admin_repassword.html" />
+        <option value="$PROJECT_DIR$/templates/admin_useradd.html" />
+        <option value="$PROJECT_DIR$/templates/admin_useredit.html" />
+        <option value="$PROJECT_DIR$/templates/admin_userlist.html" />
+        <option value="$PROJECT_DIR$/static/js/echarts.min.js" />
+        <option value="$PROJECT_DIR$/static/js/jquery.min.js" />
+        <option value="$PROJECT_DIR$/templates/test.html" />
+        <option value="$PROJECT_DIR$/templates/admin_index.html" />
+        <option value="$PROJECT_DIR$/flaskAkn.py" />
+        <option value="$PROJECT_DIR$/templates/error/404.html" />
+        <option value="$PROJECT_DIR$/templates/error/403.html" />
+        <option value="$PROJECT_DIR$/templates/error/500.html" />
+        <option value="$PROJECT_DIR$/templates/admin_base.html" />
+        <option value="$PROJECT_DIR$/static/styles/admin_styles.css" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="226" />
-    <option name="y" value="200" />
-    <option name="width" value="1026" />
-    <option name="height" value="554" />
+    <option name="x" value="-48" />
+    <option name="y" value="24" />
+    <option name="width" value="1346" />
+    <option name="height" value="697" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -85,6 +112,11 @@
               <item name="Arknights" type="b2602c69:ProjectViewProjectNode" />
               <item name="Arknights" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Arknights" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Arknights" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -94,13 +126,15 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Python" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\PycharmProjects\Arknights\static\styles" />
       <recent name="D:\PycharmProjects\Arknights\static" />
     </key>
   </component>
@@ -116,7 +150,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.aknspider">
+  <component name="RunManager" selected="JavaScript Debug.admin_index.html">
+    <configuration name="admin_index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/Arknights/templates/admin_index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <configuration name="aknspider" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Arknights" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -163,6 +200,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.admin_index.html" />
         <item itemvalue="Python.aknspider" />
         <item itemvalue="Python.flaskAkn" />
       </list>
@@ -197,11 +235,41 @@
       <workItem from="1560212909172" duration="6093000" />
       <workItem from="1560299346929" duration="11591000" />
       <workItem from="1560384921463" duration="77000" />
+      <workItem from="1560471389005" duration="1184000" />
+      <workItem from="1560731446722" duration="7659000" />
+      <workItem from="1560817871176" duration="7039000" />
+      <workItem from="1560904265625" duration="8089000" />
+      <workItem from="1560993416529" duration="7571000" />
+      <workItem from="1561076926265" duration="12488000" />
+      <workItem from="1561336764726" duration="16666000" />
+      <workItem from="1561444772647" duration="5886000" />
+      <workItem from="1561512526996" duration="595000" />
+      <workItem from="1562034268760" duration="9024000" />
+      <workItem from="1562115792259" duration="13103000" />
+      <workItem from="1562288567966" duration="13104000" />
+      <workItem from="1562573222099" duration="2211000" />
+      <workItem from="1562636743598" duration="10625000" />
+      <workItem from="1562720068238" duration="21998000" />
+      <workItem from="1562805658388" duration="13954000" />
+      <workItem from="1562891681145" duration="20359000" />
+      <workItem from="1563152534497" duration="11256000" />
+      <workItem from="1563237976419" duration="20380000" />
+      <workItem from="1563323125284" duration="11466000" />
+      <workItem from="1563411075840" duration="18619000" />
+      <workItem from="1563496787293" duration="16401000" />
+      <workItem from="1563755968192" duration="21000" />
+      <workItem from="1563756013264" duration="11555000" />
+      <workItem from="1563842216261" duration="14957000" />
+      <workItem from="1563928815153" duration="1162000" />
+      <workItem from="1563939416588" duration="1111000" />
+      <workItem from="1563947972881" duration="13278000" />
+      <workItem from="1564017313079" duration="19373000" />
+      <workItem from="1564101544048" duration="8595000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161382000" />
+    <option name="totallyTimeSpent" value="481111000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -215,11 +283,11 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13313162" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18910742" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329582" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.23311897" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3996674" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -227,7 +295,7 @@
       <window_info anchor="bottom" id="TODO" order="6" weight="0.329582" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49924356" visible="true" weight="0.3376206" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" sideWeight="0.49924356" visible="true" weight="0.20900321" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" weight="0.329582" />
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.329582" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
@@ -237,6 +305,29 @@
       <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Database" order="4" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22995462" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329582" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.23311897" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3996674" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.329582" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49924356" visible="true" weight="0.2652733" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50075644" side_tool="true" weight="0.329582" />
+      <window_info anchor="bottom" id="Python Console" order="11" weight="0.329582" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -246,14 +337,6 @@
     <SUITE FILE_PATH="coverage/Arknights$aknspider.coverage" NAME="aknspider Coverage Results" MODIFIED="1560319099658" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/img/12F05.png" />
-    <entry file="file://$PROJECT_DIR$/img/Castle-305.png" />
-    <entry file="file://$PROJECT_DIR$/img/黑角05.png" />
-    <entry file="file://$PROJECT_DIR$/img/推进之王05.png" />
-    <entry file="file://$PROJECT_DIR$/img/拉普兰德05.png" />
-    <entry file="file://$PROJECT_DIR$/img/慕斯05.png" />
-    <entry file="file://$PROJECT_DIR$/img/德克萨斯05.png" />
-    <entry file="file://$PROJECT_DIR$/img/崖心05.png" />
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/flask/app.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -262,36 +345,245 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/select.html" />
-    <entry file="file://$PROJECT_DIR$/requirements.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3052">
-          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/flaskAkn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="26" column="69" lean-forward="true" selection-start-line="26" selection-start-column="69" selection-end-line="26" selection-end-column="69" />
-          <folding>
-            <element signature="e#170#181#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js.js" />
+    <entry file="file://$PROJECT_DIR$/static/img/123.jpg" />
+    <entry file="file://$PROJECT_DIR$/static/img/helloworld.jpg" />
+    <entry file="file://$PROJECT_DIR$/static/img/None.jpg" />
+    <entry file="file://$PROJECT_DIR$/static/img/logo.jpg" />
+    <entry file="file://$PROJECT_DIR$/static/img/xnejg01nudc.jpg" />
+    <entry file="file://$PROJECT_DIR$/static/img/test.png" />
+    <entry file="file://$PROJECT_DIR$/static/img/sdf.jpg" />
+    <entry file="file://$PROJECT_DIR$/static/img/sdf.png" />
+    <entry file="file://$PROJECT_DIR$/static/img/helloworld.png" />
     <entry file="file://$PROJECT_DIR$/aknspider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-850">
-          <caret line="123" column="25" selection-start-line="123" selection-start-column="25" selection-end-line="123" selection-end-column="25" />
+        <state>
+          <caret line="122" column="4" selection-start-line="122" selection-start-column="4" selection-end-line="122" selection-end-column="4" />
           <folding>
             <element signature="e#607#748#0" />
             <element signature="e#786#2277#0" />
             <element signature="e#2370#2776#0" />
             <element signature="e#2815#3065#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/bk4.jpg" />
+    <entry file="file://$PROJECT_DIR$/static/bk3.png" />
+    <entry file="file://$PROJECT_DIR$/static/bk2.jpg" />
+    <entry file="file://$PROJECT_DIR$/static/bk1.jpg" />
+    <entry file="file://$PROJECT_DIR$/static/1.png" />
+    <entry file="file://$PROJECT_DIR$/static/img/chen.png" />
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" column="58" selection-start-line="6" selection-start-column="58" selection-end-line="6" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/styles/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/uploads/Castle-3.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/uploads/chen.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/uploads/陈sir.png" />
+    <entry file="file://$PROJECT_DIR$/templates/admin_edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/arknights_useradd.html" />
+    <entry file="file://$PROJECT_DIR$/templates/admin_add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" lean-forward="true" selection-end-line="5" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/_macros.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_nav.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="2" column="92" selection-start-line="2" selection-start-column="92" selection-end-line="2" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_repassword.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-100">
+          <caret line="14" column="12" lean-forward="true" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/arknights_add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-50">
+          <caret line="7" column="29" lean-forward="true" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
+          <folding>
+            <element signature="n#script#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/arknights_edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="95" column="12" selection-start-line="95" selection-start-column="12" selection-end-line="95" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_useradd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="29" column="66" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="85" />
+          <folding>
+            <element signature="e#246#253#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-375" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_useredit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="363">
+          <caret line="48" column="24" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
+          <folding>
+            <element signature="e#246#253#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_select.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_userlist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="23" />
+          <folding>
+            <element signature="n#div#0;n#!!top" />
+            <element signature="e#246#253#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="22237" selection-start-line="3" selection-start-column="22237" selection-end-line="3" selection-end-column="22237" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/echarts.min.js" />
+    <entry file="file://$PROJECT_DIR$/templates/test.html" />
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/pyecharts/charts/composite_charts/grid.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/arknights_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-825">
+          <caret column="14" selection-start-column="14" selection-end-column="15" />
+          <folding>
+            <element signature="n#div#1;n#!!top" />
+            <element signature="n#table#0;n#div#0;n#div#2;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1900">
+          <caret line="90" column="12" selection-start-line="90" selection-start-column="12" selection-end-line="91" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/error/403.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="7" lean-forward="true" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/error/500.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/error/404.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="7" lean-forward="true" selection-end-line="12" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/flaskAkn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="124" column="82" selection-start-line="124" selection-start-column="82" selection-end-line="124" selection-end-column="82" />
+          <folding>
+            <element signature="e#170#192#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/admin_base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="32" column="72" selection-start-line="32" selection-start-column="72" selection-end-line="32" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/styles/admin_styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="228" column="1" lean-forward="true" selection-start-line="228" selection-start-column="1" selection-end-line="228" selection-end-column="1" />
         </state>
       </provider>
     </entry>

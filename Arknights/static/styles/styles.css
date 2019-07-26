@@ -1,17 +1,26 @@
-.divline{
-    border: 1px solid #333;
+body{
+    background: url("/static/img/bk1.jpg") no-repeat fixed;/*固定背景图片、不重复*/
+}
+.ark_sel button{
+    margin-bottom: 2px;
+}
+.ark-typetd{
+    background: #aab2b4;
+    font-weight: bold;
+    text-align: center;
+    width: 60px;
     height: auto;
-    padding-top: 10px;
-    padding-bottom: 10px;
 }
-.avatar{
-    width: 80px;
-    height: 80px;
-    border: 1px dashed #333;
+.ark-show_bg{
+    background: #ffffff;
 }
-.avatarfile{
-    width: 100px;
-    height: 100px;
-    opacity: 0;/* 最关键的地方  把input设置成透明，这样只能看到按钮 */
-    position: absolute;
+.ark-showlist th{
+    background: #aab2b4;
+    text-align: center;
+    width: auto;
+    height: 40px;
 }
+
+
+
+

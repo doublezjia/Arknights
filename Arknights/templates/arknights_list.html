@@ -1,0 +1,111 @@
+<div class="row">
+    <div class="col-md-12 ark-inquire">
+    <form id="arkform" action="{{url_for('admin_select')}}" method="get">
+        <div class="row">
+            <ul>
+                <li>
+                    <span>姓名:</span>
+                <input type="text" class="ark-input" name="name" placeholder="姓名">
+                </li>
+                <li>
+                    <span>性别:</span>
+                <select name="gender" class="ark-input">
+                    <option value="">全部</option>
+                    {% for gender in condition_dict['gender'] %}
+                    <option value="{{condition_dict['gender'][gender]}}">{{gender}}</option>
+                    {% endfor %}
+                </select>
+                    </li>
+                <li>
+                <span>星级:</span>
+                <select name="star" class="ark-input">
+                    <option value="">全部</option>
+                    {% for star in condition_dict['star'] %}
+                    <option value="{{star[0]}}">{{star[0]}}星</option>
+                    {% endfor %}
+                </select>
+                </li>
+            </ul>
+    </div>
+        <div class="row">
+            <ul>
+                <li>
+                <span>阵型:</span>
+                <select class="ark-input" name="camp">
+                    <option value="">全部</option>
+                    {% for camp in condition_dict['camp'] %}
+                    <option value="{{camp[0]}}">{{camp[0]}}</option>
+                    {% endfor %}
+                </select>
+                 </li>
+                <li>
+                <span>职业:</span>
+                <select class="ark-input" name="prof">
+                    <option value="">全部</option>
+                    {% for prof in condition_dict['profession'] %}
+                    <option value="{{prof[0]}}">{{prof[0]}}</option>
+                    {% endfor %}
+                </select>
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="col-md-12 ">
+                <input type="submit" value="submit" class="btn btn-primary btn-sm">
+                <input type="reset" value="reset" class="btn btn-primary btn-sm">
+            </div>
+        </div>
+    </form>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+</script>
+
+{% for message in get_flashed_messages() %}
+    <div class="alert alert-warning">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{ message }}
+    </div>
+ {% endfor %}
+
+<div class="row" >
+<div id="show" class="col-md-12 ark-showlist">
+<table class="table table-bordered table-hover " id="load">
+                            <tr>
+                                <th>图片</th>
+                                <th>名称</th>
+                                <th>阵型</th>
+                                <th>职业</th>
+                                <th>性别</th>
+                                <th>星级</th>
+                                <th>特性</th>
+                                <th>TAG</th>
+                                <th>操作</th>
+                            </tr>
+                            {% for i in All_data %}
+                                <tr>
+                                    <td><img src="{{url_for('static',filename='uploads/'+i.name+'.png')}}" class="img-rounded"/></td>
+                                    <td>{{i.name}}</td>
+                                    <td>{{i.camp}}</td>
+                                    <td>{{i.profession}}</td>
+                                    {% if i.gender==0 %}
+                                        <td>女</td>
+                                    {% elif i.gender==1 %}
+                                        <td>男</td>
+                                    {% else %}
+                                        <td>未知</td>
+                                    {% endif %}
+                                    <td>{{i.star}}星</td>
+                                    <td>{{i.characteristic}}</td>
+                                    <td>{{i.tag}}</td>
+                                    <td>
+                                        <a href="{{url_for('ark_edit',id=i.id)}}" class="btn btn-primary btn-sm" role="button">编辑</a>
+                                        <a href="{{url_for('ark_delete',id=i.id)}}" class="btn btn-sm btn-danger" role="button">删除</a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </table>
+</div>
+</div>

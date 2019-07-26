@@ -1,0 +1,124 @@
+ {% for message in get_flashed_messages() %}
+    <div class="alert alert-warning">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{ message }}
+    </div>
+    {% endfor %}
+
+    <div class="row ark-div">
+    <div class="col-md-12">
+    <form method="post" enctype="multipart/form-data"  action="{{url_for('ark_edit',id=data.id)}}" class="form-horizontal">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}" />
+        <div class="row">
+        <div class="col-md-9">
+            <div class="form-group">
+                <label class="col-md-2">姓名:</label><div class="col-md-10"><input name="name" required="required" type="text" class="form-control" value="{{data.name}}"></div>
+            </div>
+            <div class="form-group" >
+                <label class="col-md-2">性别:</label>
+                <div class="col-md-10">
+                <select class="form-control" name="gender">
+                    {% for gender in condition_dict['gender'] %}
+                        {% if condition_dict['gender'][gender]==data.gender %}
+                            <option selected value="{{condition_dict['gender'][gender]}}" >{{gender}}</option>
+                        {% else %}
+                            <option value="{{condition_dict['gender'][gender]}}">{{gender}}</option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+                </div>
+            </div>
+            <div class="form-group" >
+             <label class="col-md-2">星级:</label>
+                <div class="col-md-10">
+                <select class="form-control" name="star">
+                    {% for star in condition_dict['star'] %}
+                        {% if star[0]==data.star %}
+                        <option selected value="{{star[0]}}">{{star[0]}}星</option>
+                        {% else %}
+                        <option value="{{star[0]}}">{{star[0]}}星</option>
+                        {% endif %}
+                    {% endfor %}
+                  </select>
+                </div>
+            </div>
+           <div class="form-group" >
+              <label class="col-md-2">阵型:</label>
+               <div class="col-md-10">
+                   <select class="form-control" name="camp">
+                       {% for camp in condition_dict['camp'] %}
+                           {% if camp[0]==data.camp %}
+                           <option selected value="{{camp[0]}}">{{camp[0]}}</option>
+                           {% else %}
+                           <option value="{{camp[0]}}">{{camp[0]}}</option>
+                           {% endif %}
+                       {% endfor %}
+                  </select>
+               </div>
+            </div>
+            <div class="form-group" >
+               <label class="col-md-2">职业:</label>
+                <div class="col-md-10">
+                <select class="form-control" name="prof">
+                    {% for prof in condition_dict['profession'] %}
+                        {% if prof[0]==data.profession %}
+                        <option selected value="{{prof[0]}}">{{prof[0]}}</option>
+                        {% else %}
+                        <option value="{{prof[0]}}">{{prof[0]}}</option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+                </div>
+            </div>
+            <div class="form-group" >
+              <label class="col-md-2">特性:</label><div class="col-md-10"><input type="text" name="chara" required="required" value="{{data.characteristic}}" class="form-control" ></div>
+            </div>
+            <div class="form-group" >
+              <label class="col-md-2">TAG:</label><div class="col-md-10"><input type="text" name="tag" value="{{data.tag}}" required="required" title="多个TAG要用中文、隔开，不能用其他符号" placeholder="多个TAG要用中文、隔开，不能用其他符号" pattern="^[\u4E00-\u9FA5A-Za-z0-9\u3001]+$" autofocus class="form-control" ></div>
+            </div>
+            <div class="form-group" >
+               <label class="col-md-2">获取方式:</label><div class="col-md-10"><textarea name="getway" required="required" class="form-control" rows="5" id="comment">{{data.getway}}</textarea></div>
+            </div>
+        </div>
+        <div class="col-md-3 form-group">
+            <label>上传头像:</label>
+            <div>
+                <input name="file1" class="ark-avatarfile" type="file" accept="image/*" onchange="showavatar(this)">
+            </div>
+            <div>
+                <img id="avatar" src="/static/uploads/{{data.name}}.png" class="ark-avatar img-fluid float-left" >
+            </div>
+        </div>
+        </div>
+        <div class="row" >
+        <div class="col-md-12 text-center">
+            <input value="更 新" type="submit" class="btn btn-primary" >
+            <input value="返 回" type="button" class="btn btn-primary" onclick="javascript:history.back()" >
+        </div>
+    </div>
+    </form>
+    </div>
+    </div>
+
+<script type="text/javascript">
+    // 实现file控件选择图片后显示出来
+    function showavatar(filedom) {
+        var avatar = document.getElementById('avatar');
+        if(window.FileReader){
+            var reader = new FileReader();
+        }
+        else{
+            alert('您的设备不支持图片预览功能，如需该功能请升级您的设备！');
+        }
+        file = filedom.files[0];
+        var imageType = /^image\//;
+        if(!imageType.test(file.type)){
+            alert('请选择图片！')
+            return;
+        }
+        reader.onload = function (e) {
+            avatar.src = e.target.result;
+        };
+        reader.readAsDataURL(file);
+    }
+</script>

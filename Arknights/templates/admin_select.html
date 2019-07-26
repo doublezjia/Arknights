@@ -1,0 +1,13 @@
+{% extends "admin_base.html" %}
+{% import "_macros.html" as macros %}
+{% block features %}
+{% include 'arknights_list.html'%}
+
+<!--分页可以传递多参数-->
+<div class="pagination">
+    {{ macros.pagination_widget(pagination,'admin_select',
+    name=session.get('name'),gender=session.get('gender'),star=session.get('star'),
+    camp=session.get('camp'),prof=session.get('prof'))}}
+</div>
+
+{% endblock %}

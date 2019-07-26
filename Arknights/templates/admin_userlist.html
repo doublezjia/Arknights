@@ -1,0 +1,50 @@
+{% extends "admin_base.html" %}
+{% block title %}明日方舟公开招募计算器后台{% endblock %}
+{% block features %}
+ {% for message in get_flashed_messages() %}
+    <div class="alert alert-warning">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{ message }}
+    </div>
+{% endfor %}
+<div class="row ark-div">
+    <div class="col-md-12">
+        <table class="table table-bordered">
+            <tr>
+                <th>名称</th>
+                <th>邮箱</th>
+                <th>角色</th>
+                <th>状态</th>
+                <th>操作</th>
+            </tr>
+            {% for i in data %}
+            <tr>
+                <td>{{i.name}}</td>
+                <td>{{i.email}}</td>
+                {% if i.role==1 %}
+                <td>管理员</td>
+                {% else %}
+                <td>普通用户</td>
+                {% endif %}
+                {% if i.status==1 %}
+                <td><img width="20px" height="20px" src="/static/img/true.png"></td>
+                {% else %}
+                <td><img width="20px" height="20px" src="/static/img/false.png"></td>
+                {% endif %}
+                <td>
+                    <a href="{{url_for('admin_userEdit',id=i.id)}}" class="btn btn-primary btn-sm">编辑</a>
+                    {% if i.name != current_user.name %}
+                        {% if i.status == 0 %}
+                            <a href="{{url_for('admin_enableStatus',id=i.id)}}" class="btn btn-success btn-sm">启用</a>
+                        {% else %}
+                            <a href="{{url_for('admin_disableStatus',id=i.id)}}" class="btn btn-warning btn-sm">禁用</a>
+                        {% endif %}
+                        <a href="{{url_for('admin_userDelete',id=i.id)}}" class="btn btn-danger btn-sm">删除</a>
+                    {% endif %}
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
+{% endblock %}

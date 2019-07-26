@@ -1,0 +1,229 @@
+body{
+    background: url("/static/img/bk1.jpg") no-repeat fixed;
+}
+/*顶部logo*/
+.ark_logo{
+    height: 100px;
+    width: 100%;
+    /*background: #F5F5F5;*/
+    background: url("/static/img/ban1.png");
+    box-shadow: 1px 1px 5px  #333;
+    margin-bottom: 10px;
+}
+.ark_logo img{
+    float: left;
+    height: 100px;
+    width: auto;
+}
+
+
+/*显示列表*/
+.ark-showlist{
+    background: #ffffff;
+    box-shadow: 1px 1px 5px #333333;
+    margin-left: 10px;
+}
+.ark-showlist th{
+    background: #aab2b4;
+    text-align: center;
+    width: auto;
+    height: 40px;
+}
+
+/*导航栏*/
+.ark-admin-nav{
+    background: #ffffff;
+    height: 500px;
+    box-shadow: 1px 1px 5px #333333;
+}
+.ark-admin-nav a{
+    display: block;
+    text-align: center;
+    width: auto;
+    background: #336699;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    font-weight:bold;
+    padding:4px;
+    border-bottom: #000000 1px dashed;
+}
+.ark-admin-nav a:hover{
+    background: #009966;
+}
+.ark-admin-nav a img{
+    width: 25px;
+    height: 25px;
+    float: left;
+}
+
+/*表格*/
+.ark-div{
+    /*border: 1px solid #333;*/
+    height: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background: #ffffff;
+    box-shadow: 1px 1px 5px #333333;
+    margin-left: 10px;
+}
+
+.ark-div label{
+    text-align: right;
+}
+
+/*头像和图片上传*/
+.ark-avatar{
+    width: 80px;
+    height: 80px;
+    border: 1px dashed #333;
+}
+.ark-avatarfile{
+    width: 100px;
+    height: 100px;
+    opacity: 0;/* 最关键的地方  把input设置成透明，这样只能看到按钮 */
+    position: absolute;
+}
+
+/*后台查询*/
+.ark-inquire{
+    background: #ffffff;
+    box-shadow: 1px 1px 5px #333333;
+    height: auto;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.ark-inquire ul{
+    list-style: none;
+}
+.ark-inquire ul li{
+    display: block;
+    width: 20%;
+    height: 30px;
+    float: left;
+}
+.ark-inquire ul li span{
+    margin: 0px;
+    padding: 0px;
+}
+.ark-inquire div{
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+/*input*/
+.ark-input{
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    width: 80%;
+    height: 35px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/*登录*/
+.ark-login{
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    padding: 10px;
+    width: 400px;
+    height: 250px;
+    background: white;
+    position: absolute;
+    box-shadow: 5px 5px 20px #333333;
+}
+.ark-login ul{
+    list-style: none;
+}
+.ark-login ul li{
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.ark-login ul li span{
+    display: block;
+    margin-top: 20px;
+}
+.ark-login ul li div{
+    margin-top: 15px;
+}
+.ark-login-ban{
+    margin-bottom: 10px;
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+/*后台用户页面*/
+.ark-user{
+    background: white;
+    width: 100%;
+    height: auto;
+    box-shadow: 5px 5px 20px #333333;
+}
+.ark-user ul{
+    list-style: none;
+    padding-top: 20px;
+}
+.ark-user ul li {
+    display: block;
+    width: 30%;
+    height: 50px;
+}
+.ark-user ul li span{
+    display: inline-block;
+    width: 60px;
+    text-align: right;
+}
+
+.ark-echarts ul{
+    list-style: none;
+}
+.ark-echarts ul li{
+    /*display: block;*/
+    float: left;
+    background-color: white;
+    width: 500px;
+    height: 500px;
+    box-shadow: 5px 5px 20px #333333;
+    margin: 10px;
+}
+.ark-echarts ul li > div{
+    width: 450px;
+    height: 450px;
+    margin: 10px;
+}
+
+.ark-error{
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    margin: 0 auto;
+    width: 700px;
+    height: 700px;
+    position: absolute;
+}
+.ark-error img{
+    width: 545px;
+    height: 545px;
+}
+
+.ark-ban-user{
+    margin-right: 10px;
+}
+
+.ark-ban-user>div > a{
+    font-size: 16px;
+    color: white;
+}
+.ark-ban-user> div > a:hover{
+    text-decoration: none;
+}

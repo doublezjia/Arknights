@@ -1,0 +1,43 @@
+{% extends "admin_base.html" %}
+{% block title %}明日方舟公开招募计算器后台{% endblock %}
+{% block features %}
+{% for message in get_flashed_messages() %}
+    <div class="alert alert-warning">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{ message }}
+    </div>
+    {% endfor %}
+
+<div class="row">
+    <div class="col-md-12 ark-echarts">
+        <ul>
+            <li><div id="pie"></div></li>
+            <li><div id="bar"></div></li>
+            <li><div id="pie2"></div></li>
+        </ul>
+    <script>
+        var pie = echarts.init(document.getElementById('pie'), 'white', {renderer: 'canvas'});
+        var bar = echarts.init(document.getElementById('bar'), 'white', {renderer: 'canvas'});
+        var pie2 = echarts.init(document.getElementById('pie2'), 'white', {renderer: 'canvas'});
+        $(
+            function () {
+                fetchData(pie,bar,pie2);
+                setInterval(fetchData, 20000);
+            }
+        );
+        function fetchData() {
+            $.ajax({
+                type: "GET",
+                url: "http://127.0.0.1:5000/barChart",
+                dataType: 'json',
+                success: function (result) {
+                    pie.setOption(result['pie']);
+                    bar.setOption(result['bar']);
+                    pie2.setOption(result['pie2']);
+                }
+            });
+        }
+    </script>
+    </div>
+</div>
+{% endblock %}

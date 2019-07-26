@@ -1,0 +1,51 @@
+{% extends "bootstrap/base.html" %}
+
+{% block head %}
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+{{ super() }}
+<link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+<link rel="icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='styles/admin_styles.css')}}">
+<script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='js/pyecharts/echarts.min.js') }}"></script>
+
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 ark_logo">
+            <img src="/static/img/1.png">
+            {% if current_user.is_authenticated %}
+            <div class="nav navbar-right ark-ban-user">
+            <div class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle='dropdown'>
+                    <span>{{current_user.name}}</span>
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    {% if current_user.role == 1 %}
+                    <li><a href="{{url_for('admin_userAdd')}}">Add User</a></li>
+                    <li><a href="{{url_for('admin_userList')}}">User List</a></li>
+                    {% endif %}
+                    <li><a href="{{url_for('admin_userRepassword')}}">Reset password</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="{{url_for('admin_logout')}}">LogOut</a></li>
+                </ul>
+            </div>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-1 ark-admin-nav">
+            {% include 'admin_nav.html'%}
+        </div>
+        <div class="col-md-11">
+            {% block features%}
+            hello world
+            {% endblock %}
+        </div>
+    </div>
+</div>
+{% endblock %}

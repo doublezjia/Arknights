@@ -15,9 +15,9 @@ headers = {
 "User-Agent": "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.131 Safari/537.36",
 }
 
-db_user = 'user'
-db_pwd = 'passwd'
-db_host = 'localhost'
+db_user = 'root'
+db_pwd = 'root123'
+db_host = '192.168.226.129'
 db_port = 3306
 database = 'arknights'
 
