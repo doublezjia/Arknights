@@ -162,7 +162,7 @@ def bar_base() -> Bar:
                          legend_opts=opts.LegendOpts(pos_left="20%"), )
     )
     return bar
-# 组合图表
+# 组合图表，测试怎么使用组合图表
 def grid_vertical() -> Grid:
     pie = (
         Pie()
