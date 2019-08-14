@@ -28,7 +28,7 @@
         function fetchData() {
             $.ajax({
                 type: "GET",
-                url: "http://127.0.0.1:5000/barChart",
+                url: "{{url_for('get_bar_chart')}}",
                 dataType: 'json',
                 success: function (result) {
                     pie.setOption(result['pie']);
