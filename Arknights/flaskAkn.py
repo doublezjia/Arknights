@@ -16,7 +16,7 @@ from flask_login import LoginManager,login_required,login_user,logout_user
 from flask_login import current_user,UserMixin
 
 # 设置csrf
-from flask_wtf.csrf import CsrfProtect
+from flask_wtf.csrf import CSRFProtect
 # and_ 连接多条件
 from sqlalchemy.sql import and_
 from werkzeug import secure_filename
@@ -27,7 +27,7 @@ from pyecharts.charts import Pie,Bar,Grid,Line
 from random import randrange
 
 app = Flask(__name__)
-CsrfProtect(app)
+csrf = CSRFProtect(app)
 bootstrap = Bootstrap(app)
 manager = Manager(app)
 login_manager = LoginManager()
